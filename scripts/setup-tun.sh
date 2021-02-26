@@ -17,7 +17,7 @@ table clash {
     chain local {
         type route hook output priority 0; policy accept;
         
-        ip protocol != { tcp, udp } accept
+        ip protocol != { icmp, tcp, udp } accept
         
         meta cgroup $BYPASS_CGROUP_CLASSID accept
         ip daddr \$LOCAL_SUBNET accept
@@ -29,7 +29,7 @@ table clash {
     chain forward {
         type filter hook prerouting priority 0; policy accept;
         
-        ip protocol != { tcp, udp } accept
+        ip protocol != { icmp, tcp, udp } accept
     
         iif utun accept
         ip daddr \$LOCAL_SUBNET accept
