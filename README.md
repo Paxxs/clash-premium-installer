@@ -10,6 +10,11 @@ Simple clash premiun core installer with full tun support for Linux.
 
 2. Clone repository
 
+   ```bash
+   git clone -b main https://github.com/Paxxs/clash-premium-installer
+   cd clash-premium-installer
+   ```
+
 3. Download clash core [link](https://github.com/Dreamacro/clash/releases/tag/premium)
 
 4. Extract core and rename it to `./clash`
